@@ -1,0 +1,18 @@
+{
+    "id": 1047,
+    "name": "Trolagi Garai Grande",
+    "author": "jonofeio1",
+    "creators": ["jonofeio1"],
+    "verifier": "Shiori",
+    "verification": "https://youtu.be/OCLDYLKld0k?si=FP1f4Z4ZXV3jXhLD",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Davi",
+            "link": "https://youtu.be/FmEBB9nkT18?si=RUokrjmDFXEsEC0D",
+            "percent": 100,
+            "hz": 120
+        }
+    ]
+}

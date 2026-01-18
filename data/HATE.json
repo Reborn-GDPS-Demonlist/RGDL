@@ -1,0 +1,18 @@
+{
+    "id": 1151,
+    "name": "HATE",
+    "author": "Shiori",
+    "creators": ["SDD","Shiori"],
+    "verifier": "Shiori",
+    "verification": "https://youtu.be/9_ObleO3r4w?si=MPzDsVBqXZwsIu7v",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Sas4",
+            "link": "https://youtu.be/hIJG2eEeia0",
+            "percent": 100,
+            "hz": 480
+        }
+    ]
+}

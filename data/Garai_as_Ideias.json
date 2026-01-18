@@ -1,0 +1,30 @@
+{
+    "id": 1444,
+    "name": "Garai as Ideias",
+    "author": "jonofeio1",
+    "creators": ["jonofeio1"],
+    "verifier": "Davi",
+    "verification": "https://youtu.be/3ktlZSYa2SE?si=wHt1tROmGMyWTffz",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Shiori",
+            "link": "https://youtu.be/vRupBN68F7w",
+            "percent": 100,
+            "hz": 240
+        } ,
+        {
+            "user": "xablauzin20203",
+            "link": "",
+            "percent": 100,
+            "hz": 240
+        } ,
+                {
+            "user": "Sas4",
+            "link": "https://www.youtube.com/watch?v=6bckt3qypF4",
+            "percent": 100,
+            "hz": 480
+        }
+    ]
+}

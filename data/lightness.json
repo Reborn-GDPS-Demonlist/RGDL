@@ -1,0 +1,18 @@
+{
+    "id": 1436,
+    "name": "lightness",
+    "author": "zenogdytb",
+    "creators": ["zenogdytb"],
+    "verifier": "zenogdytb",
+    "verification": "https://youtu.be/HSHSmERwMYM?si=uNMJTigAfixl4YA4",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Shiori",
+            "link": "https://youtu.be/CcTFqfeTC14",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}

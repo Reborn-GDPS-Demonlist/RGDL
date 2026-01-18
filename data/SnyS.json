@@ -1,0 +1,18 @@
+{
+    "id": 1052,
+    "name": "SnyS",
+    "author": "Sas4",
+    "creators": ["Sas4","Shiori"],
+    "verifier": "Shiori",
+    "verification": "https://youtu.be/3hi0GmVm4oU?si=BHtjOCyaak2dQZOs",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Sas4",
+            "link": "https://youtu.be/irjdQfwhIJY",
+            "percent": 100,
+            "hz": 480
+        }
+    ]
+}
