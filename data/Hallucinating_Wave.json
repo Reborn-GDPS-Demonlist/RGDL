@@ -1,0 +1,18 @@
+{
+    "id": 1222,
+    "name": "Hallucinating Wave",
+    "author": "Sas4",
+    "creators": ["Sas4"],
+    "verifier": "Sas4",
+    "verification": "https://youtu.be/EZ9877y6WJk?si=5uroHu50wicr7a3d",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Shiori",
+            "link": "https://youtu.be/yZa1abMv-ks?si=pdsxdQ53fSXuwqft",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
