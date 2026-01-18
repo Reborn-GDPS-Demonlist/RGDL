@@ -1,12 +1,12 @@
 {
-    "id": 57436521,
-    "name": "SampleLevel1",
-    "author": "LevelUploader",
-    "creators": ["Creator1", "Creator2", "Creator3"],
-    "verifier": "Verifier",
-    "verification": "https://www.youtube.com/watch?v=ISTl28wKSXc",
-    "percentToQualify": 56,
-    "password": "Not Copyable",
+    "id": 1647,
+    "name": "Khaki",
+    "author": "Sas4",
+    "creators": ["Sas4"],
+    "verifier": "Sas4",
+    "verification": "https://youtu.be/eah1fEPsTTg?si=r1GVyd7wanJzJlkV",
+    "percentToQualify": 100,
+    "password": "Copyable",
     "records": [
         {
             "user": "Sample_Victor_1",
