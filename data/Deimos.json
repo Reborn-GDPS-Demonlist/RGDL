@@ -1,0 +1,18 @@
+{
+    "id": 1021,
+    "name": "Deimos",
+    "author": "Sas4",
+    "creators": ["Sas4"],
+    "verifier": "Sas4",
+    "verification": "https://youtu.be/ZtaBlJOrZvE?si=F7768JdbfISucY9f",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Shiori",
+            "link": "https://youtu.be/jTrdwCU_4jA",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
