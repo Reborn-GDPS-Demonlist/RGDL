@@ -1,0 +1,18 @@
+{
+    "id": 1022,
+    "name": "DeMoN ReTraY",
+    "author": "Shiori",
+    "creators": ["Shiori"],
+    "verifier": "Shiori",
+    "verification": "https://youtu.be/4wxeSQNiAXc?si=ckmqQ5uTs-NP9L68",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Sas4",
+            "link": "https://youtu.be/6sjnNjYxc8I?si=QCCzQXvcizKcU3sf",
+            "percent": 100,
+            "hz": 480
+        }
+    ]
+}
