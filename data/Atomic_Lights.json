@@ -1,13 +1,18 @@
 {
-    "id": 1114,
-    "name": "Devotion",
-    "author": "Sas4",
-    "creators": ["KrazyBoy50"],
-    "verifier": "Sas4",
-    "verification": "https://youtu.be/dsFPl0nOdSE?si=DQhyNhjVefD7UAfc",
+    "id": 1205,
+    "name": "Atomic Lights",
+    "author": "AtomicRuby",
+    "creators": ["AtomicRuby"],
+    "verifier": "Shiori",
+    "verification": "https://youtu.be/PkmOIaHkmFM?si=FgEp6xGhdebQzpe2",
     "percentToQualify": "100",
     "password": "Copyable",
     "records": [
-
+        {
+            "user": "Sas4",
+            "link": "https://youtu.be/1UCOBT6RQzc",
+            "percent": 100,
+            "hz": 480
+        }
     ]
 }

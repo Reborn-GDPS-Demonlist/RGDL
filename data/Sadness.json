@@ -1,0 +1,18 @@
+{
+    "id": 1644,
+    "name": "Sadness",
+    "author": "Marculi8",
+    "creators": ["Marculi8"],
+    "verifier": "Marculi8",
+    "verification": "https://youtu.be/MlNgu5bK9eQ?si=M48aTkSSkOAqoYcg",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Sas4",
+            "link": "https://youtu.be/Q9j-NoxMNzU",
+            "percent": 100,
+            "hz": 480
+        }
+    ]
+}
