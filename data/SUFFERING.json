@@ -1,0 +1,30 @@
+{
+    "id": 1023,
+    "name": "SUFFERING",
+    "author": "Shiori",
+    "creators": ["Shiori","Sas4"],
+    "verifier": "Shiori",
+    "verification": "https://youtu.be/ablj4xGWuD0?si=WxxwrhhIN4P-VaFw",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Spaceuk",
+            "link": "https://www.youtube.com/shorts/qfmFWJbz7Yw",
+            "percent": 100,
+            "hz": 240
+        } ,
+        {
+            "user": "Sas4",
+            "link": "https://youtu.be/azLSPRjB_Aw",
+            "percent": 100,
+            "hz": 480
+        } ,
+                {
+            "user": "Marculi8",
+            "link": "https://youtu.be/WUPiz4iMLJk?si=if-xX12bttvUZkiv",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
