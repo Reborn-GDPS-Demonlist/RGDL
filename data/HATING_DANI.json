@@ -1,0 +1,18 @@
+{
+    "id": 1022,
+    "name": "HATING Dani",
+    "author": "xgdanix",
+    "creators": ["xgdanix"],
+    "verifier": "Shiori",
+    "verification": "https://youtu.be/YVkuoNVIOVM?si=akulx-OI4C6fqr_y",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Sas4",
+            "link": "https://youtu.be/qJUTfW0TscU?si=_rSPrwHPIjmaVYWv",
+            "percent": 100,
+            "hz": 480
+        }
+    ]
+}
