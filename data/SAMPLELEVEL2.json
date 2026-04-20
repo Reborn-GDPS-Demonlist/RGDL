@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [  
+            {
+            "user": "EPermGaming",
+            "link": "https://youtu.be/oxE2EVBV1Cs",
+            "percent": 100,
+            "hz": 240
+        }
     ]
 }
