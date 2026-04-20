@@ -1,0 +1,18 @@
+{
+    "id": 1082,
+    "name": "Kiwi Challenge",
+    "author": "Ankha",
+    "creators": ["Ankha"],
+    "verifier": "Shiori",
+    "verification": "https://youtu.be/OM6Zgat8wBI?si=2KeUU6vVdIj_a0qI",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Marculi8",
+            "link": "https://youtu.be/-Ffn5wGrkEs?si=Lb7tXXv1DP8wyTIv",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
