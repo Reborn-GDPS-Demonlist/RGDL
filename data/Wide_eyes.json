@@ -1,0 +1,18 @@
+{
+    "id": 1646,
+    "name": "Wide eyes",
+    "author": "MartimGD",
+    "creators": ["MartimGD","Marculi8"],
+    "verifier": "Marculi8",
+    "verification": "https://youtu.be/x6II9-t3wWA?si=1T_sz2exYt3WvtAy",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "MartimGD",
+            "link": "https://youtu.be/lIsxARh0b5k?si=bcrlhYgayp-AMO78",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
