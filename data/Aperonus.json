@@ -1,0 +1,18 @@
+{
+    "id": 1538,
+    "name": "Aperonus",
+    "author": "marshlatch",
+    "creators": ["marshlatch"],
+    "verifier": "Shiori",
+    "verification": "https://youtu.be/u7S6xJVafvc?si=eqhk5N0DNmdTTnru",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Marculi8",
+            "link": "https://youtu.be/Jsw1UpuUu0I?si=gt3-m5f8Ae04FbGM",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
