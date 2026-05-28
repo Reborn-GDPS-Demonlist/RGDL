@@ -8,6 +8,11 @@
     "percentToQualify": 100,
     "password": "Copyable",
     "records": [
-
+        {
+            "user": "Shiori",
+            "link": "https://youtu.be/7RFe_0mc4Ss",
+            "percent": 100,
+            "hz": 480
+        }
     ]
 }
