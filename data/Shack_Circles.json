@@ -3,12 +3,18 @@
     "name": "Shack Circles",
     "author": "TrooperGMD",
     "creators": ["TrooperGMD"],
-    "verifier": "Marculi8",
+    "verifier": "TrooperGMD",
     "verification": "https://youtu.be/XR-tIo8IyDA?si=6DZTTPCSvuIVkbzo",
     "percentToQualify": 100,
     "password": "Copyable",
     "records": [
-     {
+        {
+            "user": "Marculi8",
+            "link": "https://youtu.be/XR-tIo8IyDA?si=6DZTTPCSvuIVkbzo",
+            "percent": 100,
+            "hz": 240
+        }
+        {
             "user": "Shiori",
             "link": "https://youtu.be/jPEhWMjSK_A",
             "percent": 100,
