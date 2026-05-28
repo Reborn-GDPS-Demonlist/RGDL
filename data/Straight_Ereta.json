@@ -1,0 +1,18 @@
+{
+    "id": 1682,
+    "name": "Straight Ereta",
+    "author": "OverthinkerGD",
+    "creators": ["OverthinkerGD"],
+    "verifier": "OverthinkerGD",
+    "verification": "https://youtu.be/UpRtKXY1Z44",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+              {
+            "user": "Shiori",
+            "link": "https://youtu.be/UpRtKXY1Z44",
+            "percent": 100,
+            "hz": 480
+        }
+    ]
+}
