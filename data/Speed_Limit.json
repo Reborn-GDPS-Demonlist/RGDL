@@ -1,0 +1,18 @@
+{
+    "id": 1696,
+    "name": "Speed Limit",
+    "author": "Sas4",
+    "creators": ["Sas4"],
+    "verifier": "Mig_Gnomo",
+    "verification": "https://www.youtube.com/watch?v=CGNPtvXUkIM",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Shiori",
+            "link": "https://youtu.be/pdjgJPNjerI",
+            "percent": 100,
+            "hz": 480
+        }
+    ]
+}
