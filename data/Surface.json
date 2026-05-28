@@ -1,0 +1,24 @@
+{
+    "id": 1742,
+    "name": "Surface",
+    "author": "Cyba",
+    "creators": ["Cyba"],
+    "verifier": "Cyba",
+    "verification": "https://www.youtube.com/watch?v=yBCegOg-DHk",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Marculi8",
+            "link": "https://www.youtube.com/watch?v=yBCegOg-DHk",
+            "percent": 100,
+            "hz": 480
+        }
+        {
+            "user": "Shiori",
+            "link": "https://youtu.be/7dlRsGbGr7c",
+            "percent": 100,
+            "hz": 480
+        }
+    ]
+}
