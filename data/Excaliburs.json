@@ -1,0 +1,18 @@
+{
+    "id": 1695,
+    "name": "Excaliburs",
+    "author": "Davi",
+    "creators": ["Davi, Jon"],
+    "verifier": "Shiori",
+    "verification": "https://youtu.be/o7z_zmN_-30",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+      {
+            "user": "Marculi8",
+            "link": "https://youtu.be/NsMjXNwMD9E?si=GxdHZIqookfq39T8",
+            "percent": 100,
+            "hz": 240
+      }
+    ]
+}
