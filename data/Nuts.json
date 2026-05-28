@@ -1,0 +1,24 @@
+{
+    "id": 1604,
+    "name": "Nuts",
+    "author": "MartimGD",
+    "creators": ["MartimGD"],
+    "verifier": "MartimGD",
+    "verification": "https://www.youtube.com/watch?v=AclbGiF3LZk",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+         {
+            "user": "Shiori",
+            "link": "https://youtu.be/0Ddb_XhmhrU",
+            "percent": 100,
+            "hz": 480
+        },
+        {
+            "user": "Marculi8",
+            "link": "https://www.youtube.com/watch?v=8abAYG6aXww",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
