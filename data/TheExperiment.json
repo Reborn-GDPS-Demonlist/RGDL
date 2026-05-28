@@ -1,0 +1,24 @@
+{
+    "id": 1025,
+    "name": "The Experiment",
+    "author": "Sas4",
+    "creators": ["Sas4"],
+    "verifier": "Sas4",
+    "verification": "https://youtu.be/eYd0xbbydsM?si=WGN8yd7xjYSuXD3t",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+     {
+            "user": "Shiori",
+            "link": "https://youtu.be/JNVGGWk_GVk?si=MqFc8J4MrUckqh83",
+            "percent": 100,
+            "hz": 240
+     },
+     {
+            "user": "Marculi8",
+            "link": "https://youtu.be/VEq9s-pPIl4?si=_o6o-6z8yCQpo03U",
+            "percent": 100,
+            "hz": 240
+     }
+    ]
+}
