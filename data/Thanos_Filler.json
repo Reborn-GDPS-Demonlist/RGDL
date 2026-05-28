@@ -1,1 +1,18 @@
-
+{
+    "id": 1701,
+    "name": "Thanos Filler",
+    "author": "TrooperGMD",
+    "creators": ["TrooperGMD"],
+    "verifier": "Marculi8",
+    "verification": "https://www.youtube.com/watch?v=ea4CkL6M568&pp=0gcJCQ0LAYcqIYzv",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Shiori",
+            "link": "https://youtu.be/ZOn9KToinsk",
+            "percent": 100,
+            "hz": 480
+        }
+    ]
+}
