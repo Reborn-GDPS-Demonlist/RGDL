@@ -1,0 +1,24 @@
+{
+    "id": 1712,
+    "name": "Wander Of Thought",
+    "author": "Sas4",
+    "creators": ["Sas4"],
+    "verifier": "Sas4",
+    "verification": "https://youtu.be/ctfkKbg0HhQ",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Marculi8",
+            "link": "https://www.youtube.com/watch?v=hjbY3DB7fmo",
+            "percent": 100,
+            "hz": 240
+        }
+        {
+            "user": "Shiori",
+            "link": "https://youtu.be/ctfkKbg0HhQ",
+            "percent": 100,
+            "hz": 480
+        }
+    ]
+}
