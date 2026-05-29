@@ -1,0 +1,24 @@
+{
+    "id": 1144,
+    "name": "Geometric Future",
+    "author": "AtomicRuby",
+    "creators": ["AtomicRuby"],
+    "verifier": "AtomicRuby",
+    "verification": "https://youtu.be/qzf8ygMsZV4",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Shiori",
+            "link": "https://youtu.be/qzf8ygMsZV4",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Marculi8",
+            "link": "https://youtu.be/R7q5V9Okbp0?si=MdUFB3Uf_QHV_xhM",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
