@@ -1,0 +1,18 @@
+{
+    "id": 1002,
+    "name": "Restart",
+    "author": "xZony",
+    "creators": ["xZony"],
+    "verifier": "xZony",
+    "verification": "https://youtu.be/GfLaYaStD64",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Shiori",
+            "link": "https://youtu.be/GfLaYaStD64",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
