@@ -3,11 +3,17 @@
     "name": "Atomic Lights",
     "author": "AtomicRuby",
     "creators": ["AtomicRuby"],
-    "verifier": "Shiori",
+    "verifier": "AtomicRuby",
     "verification": "https://youtu.be/PkmOIaHkmFM?si=FgEp6xGhdebQzpe2",
     "percentToQualify": "100",
     "password": "Copyable",
-    "records": [
+    "records": [\
+        {
+            "user": "Shiori",
+            "link": "https://youtu.be/PkmOIaHkmFM?si=FgEp6xGhdebQzpe2",
+            "percent": 100,
+            "hz": 480
+        } ,
         {
             "user": "Sas4",
             "link": "https://youtu.be/1UCOBT6RQzc",
