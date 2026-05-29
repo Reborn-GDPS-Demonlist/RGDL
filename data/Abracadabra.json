@@ -1,0 +1,18 @@
+{
+    "id": 1081,
+    "name": "Abracadabra",
+    "author": "Kris",
+    "creators": ["Kris"],
+    "verifier": "Kris",
+    "verification": "https://youtu.be/whJO5hbg2KI",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Shiori",
+            "link": "https://youtu.be/whJO5hbg2KI",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
