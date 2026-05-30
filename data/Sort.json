@@ -1,0 +1,24 @@
+{
+    "id": 1188,
+    "name": "Sort",
+    "author": "Vistalic",
+    "creators": ["Vistalic"],
+    "verifier": "Sas4",
+    "verification": "https://youtu.be/w5nbq7Wf3Oc?si=Wdf-pd9meW4WPLnS",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Shiori",
+            "link": "https://youtu.be/gI7pZU3u2fk",
+            "percent": 100,
+            "hz": 240
+        } ,
+          {
+            "user": "Marculi8",
+            "link": "https://www.youtube.com/watch?v=gDLV6q3b7TE",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
