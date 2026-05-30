@@ -8,6 +8,11 @@
     "percentToQualify": 100,
     "password": "Copyable",
     "records": [
-
+        {
+            "user": "Sas4",
+            "link": "https://youtu.be/b3DmKONfn-0?is=hsoA2Ehy5gn15BNK",
+            "percent": 100,
+            "hz": 240
+        }
     ]
 }
