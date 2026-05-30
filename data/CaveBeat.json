@@ -1,0 +1,18 @@
+{
+    "id": 1196,
+    "name": "Cave Beat",
+    "author": "AtomicRuby",
+    "creators": ["AtomicRuby"],
+    "verifier": "AtomicRuby",
+    "verification": "https://youtu.be/8fxecng62V0",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Sas4",
+            "link": "https://youtu.be/YbFfbk0W-m4?is=3unJTHqScCzTzI45",
+            "percent": 100,
+            "hz": 240
+        } 
+    ]
+}
