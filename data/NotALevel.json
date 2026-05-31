@@ -1,0 +1,18 @@
+{
+    "id": 1482,
+    "name": "Not a Level",
+    "author": "Davi",
+    "creators": ["Davi"],
+    "verifier": "Davi",
+    "verification": "https://youtu.be/1BBoVsR52Vw?si=5B8yRyYqLznx_Zr3",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+      {
+            "user": "Shiori",
+            "link": "https://youtu.be/X-7FgghNZrk?si=692ohrZYAhLfnPo7",
+            "percent": 100,
+            "hz": 240
+      }
+    ]
+}
