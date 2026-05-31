@@ -1,0 +1,19 @@
+{
+    "id": 1228,
+    "name": "me and ry",
+    "author": "Davi",
+    "creators": ["Davi"],
+    "verifier": "Davi",
+    "verification": "https://youtu.be/HQI5_XgbuJs",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Shiori",
+            "link": "https://youtu.be/HQI5_XgbuJs",
+            "percent": 100,
+            "hz": 480
+        }
+
+    ]
+}
