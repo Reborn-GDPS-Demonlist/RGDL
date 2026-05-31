@@ -1,0 +1,24 @@
+{
+    "id": 1431,
+    "name": "Untitled Wave",
+    "author": "Maciel",
+    "creators": ["Maciel"],
+    "verifier": "Davi",
+    "verification": "https://youtu.be/iaeTc5-rFcM?si=wTVoz4eMJsxu1ZXi",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Shiori",
+            "link": "https://youtu.be/_dmKFjc1y-Y",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Marculi8",
+            "link": "https://youtu.be/Zp9oLY2PcD4?si=_JYHdCX7MWby2NKS",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
