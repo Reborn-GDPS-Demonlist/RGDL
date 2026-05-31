@@ -1,0 +1,18 @@
+{
+    "id": 1501,
+    "name": "Trolagi Garai Medio",
+    "author": "JonoFeio1",
+    "creators": ["JonoFeio1"],
+    "verifier": "Shiori",
+    "verification": "https://youtu.be/mPlAMduahZ8?si=ONXu7rgTGbvZpP_-",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+      {
+            "user": "Davi",
+            "link": "https://youtu.be/WC-EptSjgB4?si=tcZUvch7OQ7zxP6c",
+            "percent": 100,
+            "hz": 240
+      }
+    ]
+}
