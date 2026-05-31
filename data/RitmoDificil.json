@@ -1,0 +1,19 @@
+{
+    "id": 1326,
+    "name": "Hardest Rhythm",
+    "author": "JonCrafts",
+    "creators": ["JonCrafts"],
+    "verifier": "JonCrafts",
+    "verification": "https://youtu.be/Oi57OCbldUo",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Shiori",
+            "link": "https://youtu.be/Oi57OCbldUo",
+            "percent": 100,
+            "hz": 240
+        }
+
+    ]
+}
