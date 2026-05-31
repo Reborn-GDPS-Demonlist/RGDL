@@ -1,0 +1,18 @@
+{
+    "id": 1327,
+    "name": "Fire Sakupen",
+    "author": "Reupload",
+    "creators": ["Unknown"],
+    "verifier": "Shiori",
+    "verification": "https://youtu.be/rSZ4F1HLv7s",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+          {
+            "user": "Marculi8",
+            "link": "https://www.youtube.com/watch?v=t8DJWsHFX60&list=PLxaADmdooCNvs23p8uRAJYvEKK-kshB2B&index=13&pp=iAQB",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
