@@ -1,0 +1,18 @@
+{
+    "id": 1342,
+    "name": "Troll Circles",
+    "author": "Davi",
+    "creators": ["Davi"],
+    "verifier": "Davi",
+    "verification": "https://youtu.be/3d0f2_me4ac",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+       {
+            "user": "Shiori",
+            "link": "https://youtu.be/3d0f2_me4ac",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
