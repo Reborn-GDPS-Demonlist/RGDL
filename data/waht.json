@@ -1,0 +1,18 @@
+{
+    "id": 1574,
+    "name": "waht",
+    "author": "TrooperGMD",
+    "creators": ["TrooperGMD"],
+    "verifier": "TrooperGMD",
+    "verification": "https://youtu.be/JC5hgwWJW3s?si=F8iuf_aezz62nlhL",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+      {
+            "user": "Shiori",
+            "link": "https://youtu.be/JC5hgwWJW3s?si=F8iuf_aezz62nlhL",
+            "percent": 100,
+            "hz": 240
+      }
+    ]
+}
