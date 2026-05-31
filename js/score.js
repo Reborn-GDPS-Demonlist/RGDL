@@ -1,7 +1,7 @@
 // ─── CONFIGURAÇÕES AJUSTÁVEIS ────────────────────────────────
-const LIST_SIZE = 110;    // 👈 Aumente aqui ao adicionar fases
-const BASE_POINTS = 270; // Pontos máximos para o rank 1
-const DECAY = 0.971;     // Queda por rank (menor = mais agressivo)
+const LIST_SIZE = 120;    // 👈 Aumente aqui ao adicionar fases
+const BASE_POINTS = 280; // Pontos máximos para o rank 1
+const DECAY = 0.973;     // Queda por rank (menor = mais agressivo)
 // ─────────────────────────────────────────────────────────────
 
 const scale = 3;
