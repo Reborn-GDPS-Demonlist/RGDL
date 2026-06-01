@@ -1,0 +1,24 @@
+{
+    "id": 1545,
+    "name": "Dinis",
+    "author": "MartimGD",
+    "creators": ["MartimGD"],
+    "verifier": "Sas4",
+    "verification": "https://youtu.be/u9muwDDcIdY?is=uPG1xlzJvelX9QLV",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Shiori",
+            "link": "https://youtu.be/ElqtU3ee6hw?si=tug8Uu_BOa_3b5BN",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Marculi8",
+            "link": "https://www.youtube.com/watch?v=G7jsjrPGR1k&list=PLxaADmdooCNvs23p8uRAJYvEKK-kshB2B&index=10&pp=iAQB",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
