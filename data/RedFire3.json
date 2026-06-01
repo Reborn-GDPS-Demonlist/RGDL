@@ -1,0 +1,18 @@
+{
+    "id": 1681,
+    "name": "Red Fire III",
+    "author": "DarkLander",
+    "creators": ["DarkLander"],
+    "verifier": "DarkLander",
+    "verification": "https://youtu.be/TqzUf7d_eHU?si=LBn-qZy_MmrORUhZ",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+      {
+            "user": "Shiori",
+            "link": "https://youtu.be/TqzUf7d_eHU?si=LBn-qZy_MmrORUhZ",
+            "percent": 100,
+            "hz": 240
+      }
+    ]
+}
