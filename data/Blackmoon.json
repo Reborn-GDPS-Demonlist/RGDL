@@ -1,0 +1,18 @@
+{
+    "id": 1594,
+    "name": "Blackmoon",
+    "author": "DarkLander",
+    "creators": ["DarkLander"],
+    "verifier": "DarkLander",
+    "verification": "https://youtu.be/FmkvJvAcJmo?si=riLG71yQVm7Z7sN1",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+      {
+            "user": "Shiori",
+            "link": "https://youtu.be/FmkvJvAcJmo?si=riLG71yQVm7Z7sN1",
+            "percent": 100,
+            "hz": 240
+      }
+    ]
+}
