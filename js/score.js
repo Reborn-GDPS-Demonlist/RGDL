@@ -1,17 +1,26 @@
-// ─── CONFIGURAÇÕES AJUSTÁVEIS ────────────────────────────────
-const LIST_SIZE = 120;    // 👈 Aumente aqui ao adicionar fases
-const BASE_POINTS = 290; // Pontos máximos para o rank 1
-const DECAY = 0.971;     // Queda por rank (menor = mais agressivo)
-// ─────────────────────────────────────────────────────────────
-
 const scale = 3;
 
-export function score(rank, percent, minPercent) {
-    if (rank > LIST_SIZE) return 0;
-    if (rank > Math.floor(LIST_SIZE / 2) && percent < 100) return 0;
+// ─── CONFIGURAÇÕES — CLASSIC ──────────────────────────────────
+const CLASSIC_LIST_SIZE = 120;   // 👈 Aumente aqui ao adicionar fases Classic
+const CLASSIC_BASE_POINTS = 300; // Pontos máximos para o rank 1
+const CLASSIC_DECAY = 0.982;     // Queda por rank (menor = mais agressivo)
+// ────────────────────────────────────────────────────────────────
 
-    // Nova fórmula exponencial
-    let score = BASE_POINTS * Math.pow(DECAY, rank - 1);
+// ─── CONFIGURAÇÕES — PLATFORMER ───────────────────────────────
+const PLATFORMER_LIST_SIZE = 15;   // 👈 Aumente aqui ao adicionar fases Platformer
+const PLATFORMER_BASE_POINTS = 200; // Pontos máximos para o rank 1
+const PLATFORMER_DECAY = 0.970;     // Queda por rank (menor = mais agressivo)
+// ────────────────────────────────────────────────────────────────
+
+/**
+ * Lógica de pontuação compartilhada pelas duas listas.
+ * Não precisa mexer aqui — ajuste as constantes acima.
+ */
+function calculateScore(rank, percent, minPercent, listSize, basePoints, decay) {
+    if (rank > listSize) return 0;
+    if (rank > Math.floor(listSize / 2) && percent < 100) return 0;
+
+    let score = basePoints * Math.pow(decay, rank - 1);
 
     // Multiplicador de porcentagem (preservado original)
     score = score * ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
@@ -23,6 +32,34 @@ export function score(rank, percent, minPercent) {
         return round(score - score / 3);
     }
     return Math.max(round(score), 0);
+}
+
+/**
+ * Pontuação para fases da lista Classic
+ */
+export function scoreClassic(rank, percent, minPercent) {
+    return calculateScore(
+        rank,
+        percent,
+        minPercent,
+        CLASSIC_LIST_SIZE,
+        CLASSIC_BASE_POINTS,
+        CLASSIC_DECAY,
+    );
+}
+
+/**
+ * Pontuação para fases da lista Platformer
+ */
+export function scorePlatformer(rank, percent, minPercent) {
+    return calculateScore(
+        rank,
+        percent,
+        minPercent,
+        PLATFORMER_LIST_SIZE,
+        PLATFORMER_BASE_POINTS,
+        PLATFORMER_DECAY,
+    );
 }
 
 export function round(num) {
