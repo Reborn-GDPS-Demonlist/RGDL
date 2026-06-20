@@ -1,7 +1,7 @@
 import { store } from "../main.js";
 import { embed } from "../util.js";
 import { score } from "../score.js";
-import { fetchEditors, fetchList } from "../content.js";
+import { fetchEditors, fetchList, fetchPlatformerList } from "../content.js";
 
 import Spinner from "../components/Spinner.js";
 import LevelAuthors from "../components/List/LevelAuthors.js";
@@ -22,10 +22,26 @@ export default {
         </main>
         <main v-else class="page-list">
             <div class="list-container">
+                <div class="list-tabs">
+                    <button
+                        class="list-tab"
+                        :class="{ 'active': mode === 'classic' }"
+                        @click="switchMode('classic')"
+                    >
+                        <span class="type-label-lg">Classic</span>
+                    </button>
+                    <button
+                        class="list-tab"
+                        :class="{ 'active': mode === 'platformer' }"
+                        @click="switchMode('platformer')"
+                    >
+                        <span class="type-label-lg">Platformer</span>
+                    </button>
+                </div>
                 <table class="list" v-if="list">
                     <tr v-for="([level, err], i) in list">
                         <td class="rank">
-                            <p v-if="i + 1 <= 500" class="type-label-lg">#{{ i + 1 }}</p>
+                            <p v-if="i + 1 <= listSize" class="type-label-lg">#{{ i + 1 }}</p>
                             <p v-else class="type-label-lg">Legacy</p>
                         </td>
                         <td class="level" :class="{ 'active': selected == i, 'error': !level }">
@@ -56,7 +72,7 @@ export default {
                         </li>
                     </ul>
                     <h2>Records</h2>
-                    <p v-if="selected + 1 <= 500"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
+                    <p v-if="selected + 1 <= listSize"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
                     <p v-else>This level does not accept new records.</p>
                     <table class="records">
                         <tr v-for="record in level.records" class="record">
@@ -127,6 +143,8 @@ export default {
         </main>
     `,
     data: () => ({
+        mode: 'classic', // 'classic' or 'platformer'
+        listSize: 110,   // 👈 keep in sync with LIST_SIZE in score.js
         list: [],
         editors: [],
         loading: true,
@@ -152,26 +170,11 @@ export default {
         },
     },
     async mounted() {
-        // Hide loading spinner
-        this.list = await fetchList();
+        await this.loadList();
         this.editors = await fetchEditors();
 
-        // Error handling
-        if (!this.list) {
-            this.errors = [
-                "Failed to load list. Retry in a few minutes or notify list staff.",
-            ];
-        } else {
-            this.errors.push(
-                ...this.list
-                    .filter(([_, err]) => err)
-                    .map(([_, err]) => {
-                        return `Failed to load level. (${err}.json)`;
-                    })
-            );
-            if (!this.editors) {
-                this.errors.push("Failed to load list editors.");
-            }
+        if (!this.editors) {
+            this.errors.push("Failed to load list editors.");
         }
 
         this.loading = false;
@@ -179,5 +182,35 @@ export default {
     methods: {
         embed,
         score,
+        async loadList() {
+            this.loading = true;
+            this.errors = [];
+            this.selected = 0;
+
+            const fetcher = this.mode === 'platformer' ? fetchPlatformerList : fetchList;
+            this.list = await fetcher();
+
+            if (!this.list) {
+                this.errors = [
+                    "Failed to load list. Retry in a few minutes or notify list staff.",
+                ];
+                this.list = [];
+            } else {
+                this.errors.push(
+                    ...this.list
+                        .filter(([_, err]) => err)
+                        .map(([_, err]) => {
+                            return `Failed to load level. (${err}.json)`;
+                        })
+                );
+            }
+
+            this.loading = false;
+        },
+        async switchMode(mode) {
+            if (this.mode === mode) return;
+            this.mode = mode;
+            await this.loadList();
+        },
     },
 };
