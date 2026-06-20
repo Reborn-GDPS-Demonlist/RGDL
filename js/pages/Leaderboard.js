@@ -1,4 +1,4 @@
-import { fetchLeaderboard } from '../content.js';
+import { fetchLeaderboard, fetchPlatformerLeaderboard } from '../content.js';
 import { localize } from '../util.js';
 
 import Spinner from '../components/Spinner.js';
@@ -8,6 +8,7 @@ export default {
         Spinner,
     },
     data: () => ({
+        mode: 'classic', // 'classic' or 'platformer'
         leaderboard: [],
         loading: true,
         selected: 0,
@@ -19,6 +20,22 @@ export default {
         </main>
         <main v-else class="page-leaderboard-container">
             <div class="page-leaderboard">
+                <div class="list-tabs">
+                    <button
+                        class="list-tab"
+                        :class="{ 'active': mode === 'classic' }"
+                        @click="switchMode('classic')"
+                    >
+                        <span class="type-label-lg">Classic</span>
+                    </button>
+                    <button
+                        class="list-tab"
+                        :class="{ 'active': mode === 'platformer' }"
+                        @click="switchMode('platformer')"
+                    >
+                        <span class="type-label-lg">Platformer</span>
+                    </button>
+                </div>
                 <div class="error-container">
                     <p class="error" v-if="err.length > 0">
                         Leaderboard may be incorrect, as the following levels could not be loaded: {{ err.join(', ') }}
@@ -98,13 +115,25 @@ export default {
         },
     },
     async mounted() {
-        const [leaderboard, err] = await fetchLeaderboard();
-        this.leaderboard = leaderboard;
-        this.err = err;
-        // Hide loading spinner
-        this.loading = false;
+        await this.loadLeaderboard();
     },
     methods: {
         localize,
+        async loadLeaderboard() {
+            this.loading = true;
+            this.selected = 0;
+
+            const fetcher = this.mode === 'platformer' ? fetchPlatformerLeaderboard : fetchLeaderboard;
+            const [leaderboard, err] = await fetcher();
+            this.leaderboard = leaderboard;
+            this.err = err;
+
+            this.loading = false;
+        },
+        async switchMode(mode) {
+            if (this.mode === mode) return;
+            this.mode = mode;
+            await this.loadLeaderboard();
+        },
     },
 };
