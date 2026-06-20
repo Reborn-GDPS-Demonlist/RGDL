@@ -5,6 +5,11 @@ import { round, score } from './score.js';
  */
 const dir = '/data';
 
+/**
+ * Path to directory containing `_platformer_list.json` and all platformer levels
+ */
+const platformerDir = '/data/platformer';
+
 export async function fetchList() {
     const listResult = await fetch(`${dir}/_list.json`);
     try {
@@ -36,6 +41,37 @@ export async function fetchList() {
     }
 }
 
+export async function fetchPlatformerList() {
+    const listResult = await fetch(`${platformerDir}/_platformer_list.json`);
+    try {
+        const list = await listResult.json();
+        return await Promise.all(
+            list.map(async (path, rank) => {
+                const levelResult = await fetch(`${platformerDir}/${path}.json`);
+                try {
+                    const level = await levelResult.json();
+                    return [
+                        {
+                            ...level,
+                            path,
+                            records: level.records.sort(
+                                (a, b) => b.percent - a.percent,
+                            ),
+                        },
+                        null,
+                    ];
+                } catch {
+                    console.error(`Failed to load platformer level #${rank + 1} ${path}.`);
+                    return [null, path];
+                }
+            }),
+        );
+    } catch {
+        console.error(`Failed to load platformer list.`);
+        return null;
+    }
+}
+
 export async function fetchEditors() {
     try {
         const editorsResults = await fetch(`${dir}/_editors.json`);
@@ -48,7 +84,18 @@ export async function fetchEditors() {
 
 export async function fetchLeaderboard() {
     const list = await fetchList();
+    return buildLeaderboard(list);
+}
 
+export async function fetchPlatformerLeaderboard() {
+    const list = await fetchPlatformerList();
+    return buildLeaderboard(list);
+}
+
+/**
+ * Shared leaderboard-building logic, used by both Classic and Platformer lists
+ */
+function buildLeaderboard(list) {
     const scoreMap = {};
     const errs = [];
     list.forEach(([level, err], rank) => {
