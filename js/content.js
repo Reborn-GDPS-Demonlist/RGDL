@@ -1,4 +1,4 @@
-import { round, score } from './score.js';
+import { round, scoreClassic, scorePlatformer } from './score.js';
 
 /**
  * Path to directory containing `_list.json` and all levels
@@ -84,18 +84,19 @@ export async function fetchEditors() {
 
 export async function fetchLeaderboard() {
     const list = await fetchList();
-    return buildLeaderboard(list);
+    return buildLeaderboard(list, scoreClassic);
 }
 
 export async function fetchPlatformerLeaderboard() {
     const list = await fetchPlatformerList();
-    return buildLeaderboard(list);
+    return buildLeaderboard(list, scorePlatformer);
 }
 
 /**
- * Shared leaderboard-building logic, used by both Classic and Platformer lists
+ * Shared leaderboard-building logic, used by both Classic and Platformer lists.
+ * `scoreFn` is whichever scoring function (scoreClassic or scorePlatformer) applies.
  */
-function buildLeaderboard(list) {
+function buildLeaderboard(list, scoreFn) {
     const scoreMap = {};
     const errs = [];
     list.forEach(([level, err], rank) => {
@@ -117,7 +118,7 @@ function buildLeaderboard(list) {
         verified.push({
             rank: rank + 1,
             level: level.name,
-            score: score(rank + 1, 100, level.percentToQualify),
+            score: scoreFn(rank + 1, 100, level.percentToQualify),
             link: level.verification,
         });
 
@@ -136,7 +137,7 @@ function buildLeaderboard(list) {
                 completed.push({
                     rank: rank + 1,
                     level: level.name,
-                    score: score(rank + 1, 100, level.percentToQualify),
+                    score: scoreFn(rank + 1, 100, level.percentToQualify),
                     link: record.link,
                 });
                 return;
@@ -146,7 +147,7 @@ function buildLeaderboard(list) {
                 rank: rank + 1,
                 level: level.name,
                 percent: record.percent,
-                score: score(rank + 1, record.percent, level.percentToQualify),
+                score: scoreFn(rank + 1, record.percent, level.percentToQualify),
                 link: record.link,
             });
         });
