@@ -144,7 +144,7 @@ export default {
     `,
     data: () => ({
         mode: 'classic', // 'classic' or 'platformer'
-        listSize: 110,   // 👈 keep in sync with LIST_SIZE in score.js
+        listSize: 120,   // 👈 keep in sync with LIST_SIZE in score.js
         list: [],
         editors: [],
         loading: true,
