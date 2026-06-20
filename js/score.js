@@ -7,13 +7,19 @@ const CLASSIC_DECAY = 0.973;     // Queda por rank (menor = mais agressivo)
 // ────────────────────────────────────────────────────────────────
 
 // ─── CONFIGURAÇÕES — PLATFORMER ───────────────────────────────
-const PLATFORMER_LIST_SIZE = 15;   // 👈 Aumente aqui ao adicionar fases Platformer
+const PLATFORMER_LIST_SIZE = 15;    // 👈 Aumente aqui ao adicionar fases Platformer
 const PLATFORMER_BASE_POINTS = 200; // Pontos máximos para o rank 1
-const PLATFORMER_DECAY = 0.960;     // Queda por rank (menor = mais agressivo)
+const PLATFORMER_DECAY = 0.965;     // Queda por rank (menor = mais agressivo)
+// ────────────────────────────────────────────────────────────────
+
+// ─── CONFIGURAÇÕES — CHALLENGE ────────────────────────────────
+const CHALLENGE_LIST_SIZE = 50;    // 👈 Aumente aqui ao adicionar fases Challenge
+const CHALLENGE_BASE_POINTS = 250; // Pontos máximos para o rank 1
+const CHALLENGE_DECAY = 0.960;     // Queda por rank (menor = mais agressivo)
 // ────────────────────────────────────────────────────────────────
 
 /**
- * Lógica de pontuação compartilhada pelas duas listas.
+ * Lógica de pontuação compartilhada pelas três listas.
  * Não precisa mexer aqui — ajuste as constantes acima.
  */
 function calculateScore(rank, percent, minPercent, listSize, basePoints, decay) {
@@ -59,6 +65,20 @@ export function scorePlatformer(rank, percent, minPercent) {
         PLATFORMER_LIST_SIZE,
         PLATFORMER_BASE_POINTS,
         PLATFORMER_DECAY,
+    );
+}
+
+/**
+ * Pontuação para fases da lista Challenge
+ */
+export function scoreChallenge(rank, percent, minPercent) {
+    return calculateScore(
+        rank,
+        percent,
+        minPercent,
+        CHALLENGE_LIST_SIZE,
+        CHALLENGE_BASE_POINTS,
+        CHALLENGE_DECAY,
     );
 }
 
