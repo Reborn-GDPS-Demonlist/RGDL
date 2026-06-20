@@ -1,14 +1,20 @@
-import { fetchLeaderboard, fetchPlatformerLeaderboard } from '../content.js';
+import { fetchLeaderboard, fetchPlatformerLeaderboard, fetchChallengeLeaderboard } from '../content.js';
 import { localize } from '../util.js';
 
 import Spinner from '../components/Spinner.js';
+
+const FETCHERS = {
+    classic: fetchLeaderboard,
+    platformer: fetchPlatformerLeaderboard,
+    challenge: fetchChallengeLeaderboard,
+};
 
 export default {
     components: {
         Spinner,
     },
     data: () => ({
-        mode: 'classic', // 'classic' or 'platformer'
+        mode: 'classic', // 'classic', 'platformer', or 'challenge'
         leaderboard: [],
         loading: true,
         selected: 0,
@@ -34,6 +40,13 @@ export default {
                         @click="switchMode('platformer')"
                     >
                         <span class="type-label-lg">Platformer</span>
+                    </button>
+                    <button
+                        class="list-tab"
+                        :class="{ 'active': mode === 'challenge' }"
+                        @click="switchMode('challenge')"
+                    >
+                        <span class="type-label-lg">Challenge</span>
                     </button>
                 </div>
                 <div class="error-container">
@@ -123,7 +136,7 @@ export default {
             this.loading = true;
             this.selected = 0;
 
-            const fetcher = this.mode === 'platformer' ? fetchPlatformerLeaderboard : fetchLeaderboard;
+            const fetcher = FETCHERS[this.mode];
             const [leaderboard, err] = await fetcher();
             this.leaderboard = leaderboard;
             this.err = err;
