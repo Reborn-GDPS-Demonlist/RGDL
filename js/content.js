@@ -1,4 +1,4 @@
-import { round, scoreClassic, scorePlatformer } from './score.js';
+import { round, scoreClassic, scorePlatformer, scoreChallenge } from './score.js';
 
 /**
  * Path to directory containing `_list.json` and all levels
@@ -9,6 +9,11 @@ const dir = '/data';
  * Path to directory containing `_platformer_list.json` and all platformer levels
  */
 const platformerDir = '/data/platformer';
+
+/**
+ * Path to directory containing `_challenge_list.json` and all challenge levels
+ */
+const challengeDir = '/data/challenge';
 
 export async function fetchList() {
     const listResult = await fetch(`${dir}/_list.json`);
@@ -72,6 +77,37 @@ export async function fetchPlatformerList() {
     }
 }
 
+export async function fetchChallengeList() {
+    const listResult = await fetch(`${challengeDir}/_challenge_list.json`);
+    try {
+        const list = await listResult.json();
+        return await Promise.all(
+            list.map(async (path, rank) => {
+                const levelResult = await fetch(`${challengeDir}/${path}.json`);
+                try {
+                    const level = await levelResult.json();
+                    return [
+                        {
+                            ...level,
+                            path,
+                            records: level.records.sort(
+                                (a, b) => b.percent - a.percent,
+                            ),
+                        },
+                        null,
+                    ];
+                } catch {
+                    console.error(`Failed to load challenge level #${rank + 1} ${path}.`);
+                    return [null, path];
+                }
+            }),
+        );
+    } catch {
+        console.error(`Failed to load challenge list.`);
+        return null;
+    }
+}
+
 export async function fetchEditors() {
     try {
         const editorsResults = await fetch(`${dir}/_editors.json`);
@@ -92,9 +128,14 @@ export async function fetchPlatformerLeaderboard() {
     return buildLeaderboard(list, scorePlatformer);
 }
 
+export async function fetchChallengeLeaderboard() {
+    const list = await fetchChallengeList();
+    return buildLeaderboard(list, scoreChallenge);
+}
+
 /**
- * Shared leaderboard-building logic, used by both Classic and Platformer lists.
- * `scoreFn` is whichever scoring function (scoreClassic or scorePlatformer) applies.
+ * Shared leaderboard-building logic, used by all three lists.
+ * `scoreFn` is whichever scoring function (scoreClassic, scorePlatformer, or scoreChallenge) applies.
  */
 function buildLeaderboard(list, scoreFn) {
     const scoreMap = {};
