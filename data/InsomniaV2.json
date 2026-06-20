@@ -1,0 +1,24 @@
+{
+    "id": 1771,
+    "name": "Insomnia V2",
+    "author": "Davi",
+    "creators": ["Davi"],
+    "verifier": "Shiori",
+    "verification": "https://youtu.be/4t-_UARWmAQ",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Sas4",
+            "link": "https://youtu.be/4t-_UARWmAQ",
+            "percent": 100,
+            "hz": 240
+        } ,
+          {
+            "user": "Marculi8",
+            "link": "https://www.youtube.com/watch?v=Ic_JD0aPsJ4",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
