@@ -1,6 +1,6 @@
 import { store } from "../main.js";
 import { embed } from "../util.js";
-import { score } from "../score.js";
+import { scoreClassic, scorePlatformer } from "../score.js";
 import { fetchEditors, fetchList, fetchPlatformerList } from "../content.js";
 
 import Spinner from "../components/Spinner.js";
@@ -12,6 +12,12 @@ const roleIconMap = {
     helper: "user-shield",
     dev: "code",
     trial: "user-lock",
+};
+
+// 👈 Mantenha estes valores em sincronia com CLASSIC_LIST_SIZE / PLATFORMER_LIST_SIZE em score.js
+const LIST_SIZES = {
+    classic: 120,
+    platformer: 15,
 };
 
 export default {
@@ -144,7 +150,6 @@ export default {
     `,
     data: () => ({
         mode: 'classic', // 'classic' or 'platformer'
-        listSize: 120,   // 👈 keep in sync with LIST_SIZE in score.js
         list: [],
         editors: [],
         loading: true,
@@ -156,6 +161,9 @@ export default {
     computed: {
         level() {
             return this.list[this.selected][0];
+        },
+        listSize() {
+            return LIST_SIZES[this.mode];
         },
         video() {
             if (!this.level.showcase) {
@@ -181,7 +189,11 @@ export default {
     },
     methods: {
         embed,
-        score,
+        score(rank, percent, minPercent) {
+            return this.mode === 'platformer'
+                ? scorePlatformer(rank, percent, minPercent)
+                : scoreClassic(rank, percent, minPercent);
+        },
         async loadList() {
             this.loading = true;
             this.errors = [];
