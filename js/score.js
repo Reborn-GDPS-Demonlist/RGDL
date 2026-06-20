@@ -3,13 +3,13 @@ const scale = 3;
 // ─── CONFIGURAÇÕES — CLASSIC ──────────────────────────────────
 const CLASSIC_LIST_SIZE = 120;   // 👈 Aumente aqui ao adicionar fases Classic
 const CLASSIC_BASE_POINTS = 300; // Pontos máximos para o rank 1
-const CLASSIC_DECAY = 0.974;     // Queda por rank (menor = mais agressivo)
+const CLASSIC_DECAY = 0.970;     // Queda por rank (menor = mais agressivo)
 // ────────────────────────────────────────────────────────────────
 
 // ─── CONFIGURAÇÕES — PLATFORMER ───────────────────────────────
 const PLATFORMER_LIST_SIZE = 15;   // 👈 Aumente aqui ao adicionar fases Platformer
 const PLATFORMER_BASE_POINTS = 200; // Pontos máximos para o rank 1
-const PLATFORMER_DECAY = 0.970;     // Queda por rank (menor = mais agressivo)
+const PLATFORMER_DECAY = 0.960;     // Queda por rank (menor = mais agressivo)
 // ────────────────────────────────────────────────────────────────
 
 /**
