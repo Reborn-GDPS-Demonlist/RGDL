@@ -1,7 +1,7 @@
 import { store } from "../main.js";
 import { embed } from "../util.js";
-import { scoreClassic, scorePlatformer } from "../score.js";
-import { fetchEditors, fetchList, fetchPlatformerList } from "../content.js";
+import { scoreClassic, scorePlatformer, scoreChallenge } from "../score.js";
+import { fetchEditors, fetchList, fetchPlatformerList, fetchChallengeList } from "../content.js";
 
 import Spinner from "../components/Spinner.js";
 import LevelAuthors from "../components/List/LevelAuthors.js";
@@ -14,10 +14,23 @@ const roleIconMap = {
     trial: "user-lock",
 };
 
-// 👈 Mantenha estes valores em sincronia com CLASSIC_LIST_SIZE / PLATFORMER_LIST_SIZE em score.js
+// 👈 Mantenha estes valores em sincronia com CLASSIC_LIST_SIZE / PLATFORMER_LIST_SIZE / CHALLENGE_LIST_SIZE em score.js
 const LIST_SIZES = {
     classic: 120,
     platformer: 15,
+    challenge: 50,
+};
+
+const FETCHERS = {
+    classic: fetchList,
+    platformer: fetchPlatformerList,
+    challenge: fetchChallengeList,
+};
+
+const SCORERS = {
+    classic: scoreClassic,
+    platformer: scorePlatformer,
+    challenge: scoreChallenge,
 };
 
 export default {
@@ -42,6 +55,13 @@ export default {
                         @click="switchMode('platformer')"
                     >
                         <span class="type-label-lg">Platformer</span>
+                    </button>
+                    <button
+                        class="list-tab"
+                        :class="{ 'active': mode === 'challenge' }"
+                        @click="switchMode('challenge')"
+                    >
+                        <span class="type-label-lg">Challenge</span>
                     </button>
                 </div>
                 <table class="list" v-if="list">
@@ -149,7 +169,7 @@ export default {
         </main>
     `,
     data: () => ({
-        mode: 'classic', // 'classic' or 'platformer'
+        mode: 'classic', // 'classic', 'platformer', or 'challenge'
         list: [],
         editors: [],
         loading: true,
@@ -190,16 +210,14 @@ export default {
     methods: {
         embed,
         score(rank, percent, minPercent) {
-            return this.mode === 'platformer'
-                ? scorePlatformer(rank, percent, minPercent)
-                : scoreClassic(rank, percent, minPercent);
+            return SCORERS[this.mode](rank, percent, minPercent);
         },
         async loadList() {
             this.loading = true;
             this.errors = [];
             this.selected = 0;
 
-            const fetcher = this.mode === 'platformer' ? fetchPlatformerList : fetchList;
+            const fetcher = FETCHERS[this.mode];
             this.list = await fetcher();
 
             if (!this.list) {
