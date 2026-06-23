@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Copyable",
     "records": [
+        {
+            "user": "Davi",
+            "link": "https://youtu.be/JuvW-KavpYg?is=o2J0b-VE2udcXwKz",
+            "percent": 100,
+            "hz": 60
+        }
     ]
 }
