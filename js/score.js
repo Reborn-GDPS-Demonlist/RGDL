@@ -1,7 +1,7 @@
 const scale = 3;
 
 // ─── CONFIGURAÇÕES — CLASSIC ──────────────────────────────────
-const CLASSIC_LIST_SIZE = 120;   // 👈 Aumente aqui ao adicionar fases Classic
+const CLASSIC_LIST_SIZE = 150;   // 👈 Aumente aqui ao adicionar fases Classic
 const CLASSIC_BASE_POINTS = 300; // Pontos máximos para o rank 1
 const CLASSIC_DECAY = 0.973;     // Queda por rank (menor = mais agressivo)
 // ────────────────────────────────────────────────────────────────
