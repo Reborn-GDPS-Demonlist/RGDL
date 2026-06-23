@@ -12,13 +12,19 @@
             "user": "Shiori",
             "link": "https://youtu.be/_dmKFjc1y-Y",
             "percent": 100,
-            "hz": 240
+            "hz": 480
         },
         {
             "user": "Marculi8",
             "link": "https://youtu.be/Zp9oLY2PcD4?si=_JYHdCX7MWby2NKS",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "Mig_Gnomo",
+            "link": "https://www.youtube.com/watch?v=Pa0EQbYQ0Zw",
+            "percent": 100,
+            "hz": 60
         }
     ]
 }
