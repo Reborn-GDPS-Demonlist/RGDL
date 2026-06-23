@@ -16,7 +16,7 @@ const roleIconMap = {
 
 // 👈 Mantenha estes valores em sincronia com CLASSIC_LIST_SIZE / PLATFORMER_LIST_SIZE / CHALLENGE_LIST_SIZE em score.js
 const LIST_SIZES = {
-    classic: 120,
+    classic: 150,
     platformer: 15,
     challenge: 50,
 };
